@@ -23,15 +23,12 @@ void DynamicArray::setElement(const unsigned _index_element, const int _nouvelle
 
 void DynamicArray::setCapacite(const unsigned _nouvelle_capacite)
 {
-	if (_nouvelle_capacite > capacite)
-	{
 		int* ancienTab = tabElements;
 		tabElements = new int[_nouvelle_capacite] {};
-		for (int i = 0; i < capacite; i++)
+		for (unsigned int i = 0; i < capacite; i++)
 		{
 			tabElements[i] = ancienTab[i];
 		}
 		delete[] ancienTab;
-	}
 	capacite = _nouvelle_capacite;
 }
