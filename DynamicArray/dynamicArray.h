@@ -4,14 +4,14 @@
 
 class DynamicArray
 {
-
 public:
-
-
+	DynamicArray(unsigned int _capacite = 100);
+	int getCapacite() const;
 
 private:
-
-
+	int* tabElements;
+	unsigned int capacite;
+	
 };
 
 
