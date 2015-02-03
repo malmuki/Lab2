@@ -11,13 +11,17 @@ int DynamicArray::getCapacite() const
 	return capacite;
 }
 
-int DynamicArray::getElement(const unsigned _i)
+int DynamicArray::getElement(const unsigned _i) const
 {
 	return tabElements[_i];
 }
 
 void DynamicArray::setElement(const unsigned _index_element, const int _nouvelle_valeur_element)
 {
+	if (_index_element > capacite)
+	{
+		setCapacite(_index_element);
+	}
 	tabElements[_index_element] = _nouvelle_valeur_element;
 }
 
